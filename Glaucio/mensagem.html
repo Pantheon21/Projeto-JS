@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mensagens Recebidas</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="css3.css"/>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Menu principal</a>
+        <a href="contato.html">Contato</a> 
+        <a href="adm.html">Área Admin</a>
+    </nav>
+
+    <header>
+        <h1>Mensagens Recebidas</h1>
+    </header>
+
+    <table id="mensagemTable">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Mensagem</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+    <script>
+        function obterParametrosURL() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            return urlParams;
+        }
+
+        function exibirMensagens() {
+            const params = obterParametrosURL();
+            const nome = params.get('nome');
+            const email = params.get('email');
+            const mensagem = params.get('mensagem');
+
+            const mensagemTable = document.getElementById('mensagemTable').getElementsByTagName('tbody')[0];
+            const newRow = mensagemTable.insertRow();
+
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2);
+
+            cell1.innerHTML = nome;
+            cell2.innerHTML = email;
+            cell3.innerHTML = mensagem;
+        }
+
+        window.onload = exibirMensagens;
+    </script>
+
+    <p>Para enviar uma nova mensagem, <a href="contato.html">clique aqui</a>.</p>
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+    <script src="/assets/js/api.js"></script>
+    <script src="/assets/js/mensagens.js"></script>
+
+</body>
+
+</html>

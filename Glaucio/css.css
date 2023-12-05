@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #333;
+    color: rgba(255, 255, 255, 0.999);
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.lorem {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.lorem p {
+    flex: 0 0 45%;
+    margin: 0;
+}
+
+.lorem p:first-child {
+    text-align: right;
+    margin-bottom: 20px;
+}

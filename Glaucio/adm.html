@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Área Administrativa</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Menu principal</a>
+        <a href="contato.html">Contato</a> 
+        <a href="aadm.html">Área Admin</a> 
+    </nav>
+
+    <header>
+        <h1>Área Administrativa</h1>
+    </header>
+
+    <div class="login-form">
+        <form id="loginForm">
+            <input type="text" id="login" placeholder="Login"><br>
+            <input type="password" id="senha" placeholder="Senha"><br>
+            <button type="button" onclick="verificarLogin()">Entrar</button>
+        </form>
+    </div>
+
+    <script>
+        function verificarLogin() {
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+            if (login === 'Renan' && senha === 'Renan') {
+                window.location.href = 'index.html';
+            } else {
+                alert('Login ou senha incorretos. Tente novamente.');
+            }
+        }
+    </script>
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/jquery-3.6.4.min.js"></script>
+    <script src="/assets/js/api.js"></script>
+    <script src="/assets/js/contato.js"></script>
+    <script src="/assets/js/area_admin.js"></script>
+
+</body>
+
+</html>
